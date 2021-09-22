@@ -3256,6 +3256,9 @@ body .anim-1 span {
   min-height: 100%;
   padding: 45px; }
 
+.winner-tmb-info .units-rub {
+  font-weight: normal; }
+
 .winner-tmb-1 {
   background: #272A37 url(../images/prize-tmb-1-bg.png) right bottom no-repeat;
   background-size: auto 100%; }
@@ -3318,6 +3321,14 @@ body .anim-1 span {
   opacity: .3;
   margin: 0 0 7px 0; }
 
+.winner-tmb-info a,
+.winner-tmb-info a:focus {
+  color: #fff !important;
+  text-decoration: underline; }
+
+.winner-tmb-info a:hover {
+  text-decoration: none; }
+
 .winner-tmb-button {
   margin: 52px 0 0 0; }
 
@@ -3364,6 +3375,9 @@ body .anim-1 span {
   position: relative;
   padding: 105px 46px 101px 46px;
   overflow: hidden; }
+
+.reg-wrapper .units-rub {
+  font-weight: normal; }
 
 .reg-bg {
   position: absolute;
