@@ -8,7 +8,7 @@ if ($("#mobile-indicator").css("display") == "none") {
 
 }
 
-var animMultiplier = 0.4;
+var animMultiplier = 0.75;
 
 $(".task-tmb-small, .task-tmb-big, .task-arrow").each(function (index) {
 

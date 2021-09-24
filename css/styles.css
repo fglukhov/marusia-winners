@@ -3293,6 +3293,9 @@ body .anim-1 span {
 .winner-tmb-pic img {
   width: 120px; }
 
+.winner-tmb-pic img[src*=jpg] {
+  border-radius: 15px; }
+
 .winner-tmb h3,
 .winner-tmb .h3 {
   font-weight: 600;
