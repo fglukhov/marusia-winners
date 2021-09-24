@@ -49,32 +49,36 @@ $(document).ready(function() {
 			curTarget = $($(this).data("target")),
 			curSiblings = $(this).closest(".ajax-links").find(".ajax-link");
 
-		curTarget.addClass("loading");
+		if (!curLink.hasClass("active")) {
 
-		$.ajax({
-			url: curUrl,
-			dataType: "html"
-		}).done(function(data) {
+			curTarget.addClass("loading");
 
-			curTarget.html($(data)).removeClass("loading");
+			$.ajax({
+				url: curUrl,
+				dataType: "html"
+			}).done(function (data) {
 
-			curSiblings.removeClass("active");
+				curTarget.html($(data)).removeClass("loading");
 
-			curLink.addClass("active");
+				curSiblings.removeClass("active");
 
-			if (curLink.hasClass("location-link")) {
+				curLink.addClass("active");
 
-				$(".location-tabs-select").val(curLink.data("index"));
+				if (curLink.hasClass("location-link")) {
 
-				if ($("#mobile-indicator").css("display") != "block") {
+					$(".location-tabs-select").val(curLink.data("index"));
 
-					$(".location-tabs-select").change();
+					if ($("#mobile-indicator").css("display") != "block") {
+
+						$(".location-tabs-select").change();
+
+					}
 
 				}
 
-			}
+			});
 
-		});
+		}
 
 		return false;
 
